@@ -18,7 +18,7 @@ const Root: React.FC = () => {
          <button type='button' onClick={routeWorkflowClick}>Workflow</button>
          <button type='button' onClick={routeSettingsClick}>Einstellungen</button>
          <Outlet />
-         <p>Fusszeile</p>
+         <p>Eine Fusszeile</p>
       </>);
 }
 

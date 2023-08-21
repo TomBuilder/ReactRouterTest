@@ -4,15 +4,16 @@ import {
    createBrowserRouter,
    RouterProvider
 } from "react-router-dom";
-import Root from './root';
+import Root, { loader as rootLoader } from './root';
 import Workflow from './workflow';
 import Settings from './settings';
+import AlertProvider from './alert/AlertProvider'
 
 const router = createBrowserRouter([
    {
       path: "/",
       element: <Root />,
-      //loader: rootLoader,
+      loader: rootLoader,
       //action: rootAction,
       //errorElement: <ErrorPage />,
       children: [
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+   <React.StrictMode>
+      <AlertProvider />
       <RouterProvider router={router } />
   </React.StrictMode>,
 )

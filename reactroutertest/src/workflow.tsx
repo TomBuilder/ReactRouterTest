@@ -10,13 +10,6 @@ const Workflow: React.FC = () => {
       setSettings(newSettings);
    };
 
-   //useBeforeUnload(
-   //   React.useCallback(() => {
-   //      setSettingsChanged(false);
-   //      alert(settings?.value1);
-   //   }, [settingsChanged])
-   //);
-
    return (
       <>
          <p>Workflows... Setting: {settings.value1}</p>

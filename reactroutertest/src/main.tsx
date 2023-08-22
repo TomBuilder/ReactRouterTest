@@ -7,7 +7,6 @@ import {
 import Root, { loader as rootLoader } from './root';
 import Workflow from './workflow';
 import Settings from './settings';
-import AlertProvider from './alert/AlertProvider'
 
 const router = createBrowserRouter([
    {
@@ -44,7 +43,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
    <React.StrictMode>
-      <AlertProvider />
       <RouterProvider router={router } />
   </React.StrictMode>,
 )

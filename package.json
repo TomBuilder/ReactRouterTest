@@ -3,6 +3,7 @@
     "react-router-dom": "^6.15.0"
   },
   "devDependencies": {
+    "@simbathesailor/use-what-changed": "^2.0.0",
     "sass": "^1.66.1"
   }
 }

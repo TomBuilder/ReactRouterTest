@@ -1,9 +1,6 @@
 ﻿import React from 'react';
 import { Outlet, useLoaderData, useNavigate, useOutletContext, useLocation } from "react-router-dom";
 import type { Settings as settingType } from "../types/types";
-import { useWhatChanged, setUseWhatChange } from '@simbathesailor/use-what-changed';
-
-setUseWhatChange(true);
 
 export function useSettings() {
    return useOutletContext();
@@ -45,7 +42,6 @@ const Root: React.FC = () => {
       };
    }, []);
 
-   useWhatChanged([location, settings]); // debugs the below useEffect
    React.useEffect(() => {
       if (settings.hasChanged) {
          console.log('Location changed, save settings!', location.pathname);
@@ -54,7 +50,7 @@ const Root: React.FC = () => {
       }
       else
          console.log('Location changed!', location.pathname);
-   }, [location, settings]);
+   }, [location]);
 
    const settingsClick = () => {
       if (settings !== null) {
